@@ -21,14 +21,15 @@ module.exports = function(grunt) {
       },
     },
     web_server: {
-    options: {
-      cors: true,
-      port: 8000,
-      nevercache: true,
-      logRequests: true
-    },
-    foo: 'bar' // For some reason an extra key with a non-object value is necessary
-  },
+      all: {
+        options: {
+          cors: true,
+          port: 8000,
+          nevercache: true,
+          logRequests: true
+        }
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -40,4 +41,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('compile', ['clean', 'coffee']);
   grunt.registerTask('build', ['clean', 'coffee']);
+  grunt.registerTask('default', ['clean', 'coffee', 'web_server']);
 }

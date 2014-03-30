@@ -10,8 +10,8 @@ class App.Router extends Backbone.Router
     console.log 'You are home.'
 
   english: ->
-    @navigate(new App.English())
+    new App.English()
 
   spanish: ->
-    @navigate(new App.Spanish())
+    new App.Spanish()
 
