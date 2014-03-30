@@ -19,4 +19,5 @@
 * Compile the Coffeescript  
 `grunt build`
 
-* View the `index.html` file  
+* Run the web server at `http://localhost:8000`
+`grunt web-server`
