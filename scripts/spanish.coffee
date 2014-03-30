@@ -1,6 +1,6 @@
 namespace('App')
 
-class App.View extends Backbone.View
+class App.Spanish extends Backbone.View
 
   initialize: ->
     console.log 'hola'

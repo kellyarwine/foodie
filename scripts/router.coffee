@@ -2,7 +2,16 @@ namespace('App')
 
 class App.Router extends Backbone.Router
   routes:
-    '': 'home'
+    ''        : 'home'
+    'english' : 'english'
+    'spanish' : 'spanish'
 
   home: ->
-    @navigate(new App.View())
+    console.log 'You are home.'
+
+  english: ->
+    @navigate(new App.English())
+
+  spanish: ->
+    @navigate(new App.Spanish())
+
