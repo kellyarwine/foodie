@@ -7,4 +7,10 @@ class App.English extends Backbone.View
     @search = 'carnitas'
     console.log 'hello'
     f2f = new App.Food2Fork()
-    console.log f2f.fetch()
+    f2f.fetch(
+      dataType: 'jsonp'
+      jsonpCallback: 'foo'
+    )
+
+  foo: ->
+    console.log "callback"

@@ -14,7 +14,6 @@ module.exports = function(grunt) {
       compileScripts: {
         expand: true,
         flatten: true,
-        cwd: 'scripts',
         src: '**/*.coffee',
         dest: '.tmp/scripts',
         ext: '.js'
@@ -23,20 +22,16 @@ module.exports = function(grunt) {
     web_server: {
       all: {
         options: {
-          cors: true,
           port: 8000,
           nevercache: true,
           logRequests: true
         }
       }
-    }
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-jst');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-web-server');
 
   grunt.registerTask('compile', ['clean', 'coffee']);
