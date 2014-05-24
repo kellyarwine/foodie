@@ -1,4 +1,4 @@
 $ ->
   console.log "Loading..."
-  new App.Router()
+  new Foodie.Router()
   Backbone.history.start()

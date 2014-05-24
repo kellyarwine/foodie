@@ -1,17 +1,14 @@
-namespace('App')
+namespace('Foodie')
 
-class App.Router extends Backbone.Router
+class Foodie.Router extends Backbone.Router
   routes:
-    ''        : 'home'
-    'english' : 'english'
-    'spanish' : 'spanish'
+    ''              : 'home'
+    'recipe_search' : 'recipeSearch'
 
   home: ->
     console.log 'You are home.'
 
-  english: ->
-    new App.English()
-
-  spanish: ->
-    new App.Spanish()
+  recipeSearch: ->
+    recipeSearchView = new Foodie.RecipeSearchView()
+    $('body').append(recipeSearchView.render().$el)
 
