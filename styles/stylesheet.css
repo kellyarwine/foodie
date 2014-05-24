@@ -1,0 +1,52 @@
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  color: green;
+}
+
+table {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-collapse: collapse;
+}
+
+td {
+  border-top: 1px solid #cccccc;
+}
+
+th {
+  height: 10px;
+  padding: 15px;
+}
+
+.left-align {
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  vertical-align: center;
+  text-align: left;
+}
+
+form {
+  text-align: center;
+}
+
+.img-holder {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-holder img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 150px;
+}
